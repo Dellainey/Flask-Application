@@ -1,6 +1,6 @@
 
-import os
 import json
+import os
 import pickle
  
 from flask import Flask, request, Response
@@ -26,7 +26,7 @@ model = Model(
 app = Flask(__name__)
  
 @app.route('/')
-def hello_world():
+def test_page():
    target = os.environ.get('TARGET', 'World')
    return 'Hello {}!\n'.format(target)
  
